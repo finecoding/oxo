@@ -101,6 +101,21 @@ Another useful flag for troubleshooting is the **go get -x** which tells you all
 This document is in finecoding/oxo/notes.md
 
 **git add .**
+**git commit -m "tidied up explanation text"**
+[master cacd7d9] tidied up explanation text
+ 1 file changed, 45 insertions(+), 10 deletions(-)
+**git push -u origin master**
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.60 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To ssh://github.com/finecoding/oxo.git
+   c609c58..cacd7d9  master -> master
+Branch master set up to track remote branch master from origin.
+
+Lovely!  All works.
+
 
 
 
