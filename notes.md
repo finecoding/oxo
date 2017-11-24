@@ -10,6 +10,8 @@ Taking Github as an example, all copies of repositories held at Github.com are s
 
 A repository can hold multiple packages and each package is associated with a single directory.  Here we have a hosting account called called finecoding that contains holds two repositories oxo and webapp.  Each repository can be be further subdivided into subdirectories and each subdirectory within repository is a package.  The files within a package are used for code sharing.  The package name identifies that directory of shared code both on remote public repository hosting systems and also locally.  One can be determined from the other.
 
+![gitdiag1](/home/paul/Documents/gitdiag1.svg)
+
 ## How Golang tooling finds packages
 
 The full local filepath for oxo repository is:
@@ -82,7 +84,7 @@ How to get it Git authentication working automatically using ssh and a public ke
 
 In ~/.ssh ensure a public and private key are generated.  id_rsa is the default name for a public key.
 
-When the git client does a push, it logs into github by submitting this key.  If the github account has this in its list of know keys, then the git client user is authenticated.  If not, it asks for a username and password.
+When the git client does a push, it logs into github by submitting this key.  If the github account has this key in its list of know keys, the git client user is authenticated.  If not, it defaults to authentication by asking for a username and password.
 
 To get the client to submit its public key, we need the ssh-agent running on the client computer
 
@@ -92,7 +94,9 @@ we add the public key to the agent:
 
 ssh-add ~/.ssh/id_rsa
 
-Then we need to ensure the git client is correctly configured to track the remote repo on github.
+This process can have a few complications that can be covered in a seperate document.  For now we assume the public key used by the git client has been copied to Github and stored in its list of know keys.  Basically the git client and git server (github) need to know each others public keys. The git client will learn githubs public key when it first connects using ssh.   The authenication by public key exchange is complete when there are no more username and password challenges by github.   
+
+Next we need to ensure the git client is correctly configured to track the remote repo on github.
 
 We can pick up the remote repo url to use from the copy/clone option on the github admin screen
 
