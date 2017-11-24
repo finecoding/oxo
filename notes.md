@@ -10,7 +10,11 @@ Taking Github as an example, all copies of repositories held at Github.com are s
 
 A repository can hold multiple packages and each package is associated with a single directory.  Here we have a hosting account called called finecoding that contains holds two repositories oxo and webapp.  Each repository can be be further subdivided into subdirectories and each subdirectory within repository is a package.  The files within a package are used for code sharing.  The package name identifies that directory of shared code both on remote public repository hosting systems and also locally.  One can be determined from the other.
 
-![gitdiag1](/home/paul/GoglandProjects/src/github.com/finecoding/oxo/gitdiag1.svg)
+![gitdiag1](gitdiag1.svg)
+
+
+
+
 
 ## How Golang tooling finds packages
 
