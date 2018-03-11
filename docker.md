@@ -1,4 +1,4 @@
-## Docker and Microservices
+# Docker and Microservices
 
 Docker is a container technology that shares the Linux kernel between containers that are partitioned from each other and maintain  separate namespaces.  This seperation allows containers to very lightweight and hold only the dependencies they need to run a particular application.  They do not try to emulate the hardware of a server like a Virtual Machine (VM), they share the hosts Linux kernel.  They can be used to develop very small, dedicated microservers that contain only the executables needed to perform a particular role.
 
